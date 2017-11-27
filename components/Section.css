@@ -1,21 +1,44 @@
-.Section {
-  box-sizing: border-box;
-  display: inline-block;
-  background: gray;
-  padding: 20px;
+p, h2 {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .Section--full {
  width: 100%;
- text-align: center;
  margin: 0;
+ justify-content: center;
+ display: flex;
+ border: solid;
+ border-bottom: none;
 }
-.Section--half {
-    width: 50%;
+
+.Section--left {
+    margin-right: auto;
+    border: solid;
+    border-right: none;
 }
-.Section p {
-    color: red;
+
+.Section--right {
+    margin-left: auto;
+    border: solid;
 }
+
+.new_box::after {
+  content: 'New!';
+  float: right;
+  padding: 7px;
+  font-size: 15px;
+  background-color: grey;
+  margin-right: -10px;
+}
+
+.Column-parent {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .Section--red-text .section__text {
     color: red;
 }
+
